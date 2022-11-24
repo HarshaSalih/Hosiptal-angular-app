@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,9 +24,10 @@ const myRoute:Routes=[
     component:PatientDeleteComponent
   },
   {
-    path:"viewallpatients",
-    component:ViewAllPatientsComponent
+    path:"viewallcomponents"
+    component:ViewAllPatients1Component
   }
+  
 ]
 
 @NgModule({
@@ -35,7 +36,6 @@ const myRoute:Routes=[
     PatientEntryComponent,
     PatientSearchComponent,
     PatientDeleteComponent,
-    ViewAllPatientsComponent,
     ViewAllPatients1Component
   ],
   imports: [
