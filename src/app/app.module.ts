@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -6,27 +6,29 @@ import { AppComponent } from './app.component';
 import { PatientEntryComponent } from './patient-entry/patient-entry.component';
 import { PatientSearchComponent } from './patient-search/patient-search.component';
 import { PatientDeleteComponent } from './patient-delete/patient-delete.component';
-import { ViewAllComponentsComponent } from './view-all-patients/view-all-patients.component'
+
 import { Route, RouterModule, Routes } from '@angular/router';
 import { ViewAllPatients1Component } from './view-all-patients1/view-all-patients1.component';
-;
+import { NavbarComponent } from './navbar/navbar.component';
+
 const myRoute:Routes=[
   {
     path:"",
     component:PatientEntryComponent
   },
   {
-    path:"search",
-    component:PatientSearchComponent
+   path:"search",
+   component:PatientSearchComponent
   },
   {
     path:"delete",
     component:PatientDeleteComponent
   },
   {
-    path:"viewallpatients",
-    component:ViewAllPatientsComponent
+    path:"view",
+    component:ViewAllPatients1Component
   }
+  
 ]
 
 @NgModule({
@@ -35,8 +37,8 @@ const myRoute:Routes=[
     PatientEntryComponent,
     PatientSearchComponent,
     PatientDeleteComponent,
-    ViewAllPatientsComponent,
-    ViewAllPatients1Component
+    ViewAllPatients1Component,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
